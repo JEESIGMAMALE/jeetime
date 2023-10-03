@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .countdown-box {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #ff0000; /* Red background color */
+            color: #000; /* Black text color */
+            border-radius: 5px;
+        }
+        .countdown-text {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: "Helvetica Neue", sans-serif; /* Different font */
+            color: #007bff; /* Blue text color */
+        }
+    </style>
+    <script>
+        // Function to calculate the time remaining
+        function countdown() {
+            // Set the target date (April 1, 2025)
+            var targetDate = new Date("2025-04-01T00:00:00Z");
+            
+            // Get the current date and time
+            var currentDate = new Date();
+            
+            // Calculate the time difference in milliseconds
+            var timeRemaining = targetDate - currentDate;
+            
+            if (timeRemaining <= 0) {
+                document.getElementById("countdown").innerHTML = "Jee has arrived!";
+            } else {
+                // Calculate years, days, hours, minutes, and seconds
+                var years = Math.floor(timeRemaining / (365 * 24 * 60 * 60 * 1000));
+                var days = Math.floor((timeRemaining % (365 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
+                var hours = Math.floor((timeRemaining % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+                var minutes = Math.floor((timeRemaining % (60 * 60 * 1000)) / (60 * 1000));
+                var seconds = Math.floor((timeRemaining % (60 * 1000)) / 1000);
+                
+                // Display the countdown in separate boxes with "Away from jee" text
+                document.getElementById("years").innerHTML = years + "y";
+                document.getElementById("days").innerHTML = days + "d";
+                document.getElementById("hours").innerHTML = hours + "h";
+                document.getElementById("minutes").innerHTML = minutes + "m";
+                document.getElementById("seconds").innerHTML = seconds + "s";
+                
+                // Display the "Away from jee" text with different style
+                document.getElementById("countdown-text").innerHTML = "AWAY FROM JEE";
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(countdown, 1000);
+    </script>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <div class="countdown-box" id="years">0y</div>
+    <div class="countdown-box" id="days">0d</div>
+    <div class="countdown-box" id="hours">0h</div>
+    <div class="countdown-box" id="minutes">0m</div>
+    <div class="countdown-box" id="seconds">0s</div>
+    <p class="countdown-text" id="countdown-text"></p>
+</body>
+</html>
