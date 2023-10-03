@@ -4,9 +4,17 @@
     <title>Countdown Timer</title>
     <style>
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             text-align: center;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+        }
+        .countdown-container {
+            text-align: center;
         }
         .countdown-box {
             display: inline-block;
@@ -64,12 +72,14 @@
     </script>
 </head>
 <body>
-    <h1>Countdown Timer</h1>
-    <div class="countdown-box" id="years">0y</div>
-    <div class="countdown-box" id="days">0d</div>
-    <div class="countdown-box" id="hours">0h</div>
-    <div class="countdown-box" id="minutes">0m</div>
-    <div class="countdown-box" id="seconds">0s</div>
-    <p class="countdown-text" id="countdown-text"></p>
+    <div class="countdown-container">
+        <h1>Countdown Timer</h1>
+        <div class="countdown-box" id="years">0y</div>
+        <div class="countdown-box" id="days">0d</div>
+        <div class="countdown-box" id="hours">0h</div>
+        <div class="countdown-box" id="minutes">0m</div>
+        <div class="countdown-box" id="seconds">0s</div>
+        <p class="countdown-text" id="countdown-text"></p>
+    </div>
 </body>
 </html>
