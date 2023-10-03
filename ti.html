@@ -18,16 +18,16 @@
         }
         .countdown-box {
             display: inline-block;
-            margin: 10px;
-            padding: 10px;
-            font-size: 24px;
+            margin: 16px;
+            padding: 16px;
+            font-size: 38.4px; /* 24px * 1.6 = 38.4px */
             font-weight: bold;
             background-color: #ff0000; /* Red background color */
             color: #000; /* Black text color */
             border-radius: 5px;
         }
         .countdown-text {
-            font-size: 36px;
+            font-size: 57.6px; /* 36px * 1.6 = 57.6px */
             font-weight: bold;
             font-family: "Helvetica Neue", sans-serif; /* Different font */
             color: #007bff; /* Blue text color */
@@ -36,8 +36,8 @@
     <script>
         // Function to calculate the time remaining
         function countdown() {
-            // Set the target date (April 1, 2025)
-            var targetDate = new Date("2025-04-01T00:00:00Z");
+            // Set the target date (January 24, 2025)
+            var targetDate = new Date("2025-01-24T00:00:00Z");
             
             // Get the current date and time
             var currentDate = new Date();
@@ -73,7 +73,7 @@
 </head>
 <body>
     <div class="countdown-container">
-        <h1>Countdown Timer</h1>
+        <h1 style="font-size: 57.6px;">Countdown Timer</h1>
         <div class="countdown-box" id="years">0y</div>
         <div class="countdown-box" id="days">0d</div>
         <div class="countdown-box" id="hours">0h</div>
